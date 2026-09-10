@@ -1,0 +1,257 @@
+{
+  "private": true,
+  "retool": {
+    "app": {
+      "uuid": "62f4fbd2-ac80-11f1-aaef-bfd4d4f900d9",
+      "name": null,
+      "resourceReferencesByFile": {
+        "/backend/admin/authz.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/admin/deletePostAdmin.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/admin/getAllPosts.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/admin/getAllProfiles.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/admin/getMyAdminStatus.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/admin/getStats.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/admin/setAdminStatus.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/calls/answerCall.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/calls/declineCall.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/calls/endCall.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/calls/getActiveCall.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/calls/getCallById.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/calls/getIceCandidates.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/calls/sendIceCandidate.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/calls/startCall.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/friends/getFriendRequests.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/friends/getFriends.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/friends/removeFriend.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/friends/respondFriendRequest.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/friends/sendFriendRequest.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/messages/getConversations.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/messages/getMessages.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/messages/markRead.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/messages/sendMessage.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/posts/addComment.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/posts/createPost.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/posts/deletePost.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/posts/getComments.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/posts/getFeed.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/posts/toggleLike.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/profiles/ensureProfile.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/profiles/getProfile.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/profiles/searchProfiles.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/profiles/updateProfile.ts": [
+          {
+            "name": "7c1e7374-931d-43b8-bf90-20b8a830f213",
+            "displayName": "retool_db",
+            "type": "retoolDb"
+          }
+        ],
+        "/backend/storage/uploadImage.ts": [
+          {
+            "name": "retool_storage",
+            "displayName": "retool_storage",
+            "type": "retoolStorage"
+          }
+        ],
+        "/backend/user.d.ts": []
+      }
+    }
+  }
+}
