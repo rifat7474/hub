@@ -1,0 +1,152 @@
+{
+  "entities": {
+    "Profile": {
+      "title": "Profile",
+      "description": "User profile information for social network members",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Unique numeric profile ID" },
+        "user_id": { "type": "string", "description": "Firebase Auth UID or user ID" },
+        "email": { "type": "string", "format": "email", "description": "User email address" },
+        "full_name": { "type": "string", "description": "Display name of the user" },
+        "avatar_url": { "type": "string", "description": "URL to the avatar image" },
+        "bio": { "type": "string", "description": "User biography or status" },
+        "is_admin": { "type": "boolean", "description": "Whether user has administrator privileges" },
+        "created_at": { "type": "string", "format": "date-time", "description": "Account creation timestamp" }
+      },
+      "required": ["id", "user_id", "email", "full_name"]
+    },
+    "Post": {
+      "title": "Post",
+      "description": "Social feed post created by a user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Post ID" },
+        "author_id": { "type": "number", "description": "Profile ID of the author" },
+        "author_name": { "type": "string", "description": "Author display name" },
+        "author_avatar": { "type": "string", "description": "Author avatar URL" },
+        "content": { "type": "string", "description": "Post body text" },
+        "image_url": { "type": "string", "description": "Optional post image URL" },
+        "like_count": { "type": "number", "description": "Number of likes" },
+        "comment_count": { "type": "number", "description": "Number of comments" },
+        "created_at": { "type": "string", "format": "date-time", "description": "Creation timestamp" }
+      },
+      "required": ["id", "author_id", "content", "created_at"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "Comment on a feed post",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Comment ID" },
+        "post_id": { "type": "number", "description": "Associated post ID" },
+        "profile_id": { "type": "number", "description": "Author profile ID" },
+        "author_name": { "type": "string", "description": "Author display name" },
+        "author_avatar": { "type": "string", "description": "Author avatar URL" },
+        "content": { "type": "string", "description": "Comment text" },
+        "created_at": { "type": "string", "format": "date-time", "description": "Creation timestamp" }
+      },
+      "required": ["id", "post_id", "profile_id", "content", "created_at"]
+    },
+    "Like": {
+      "title": "Like",
+      "description": "Like on a feed post",
+      "type": "object",
+      "properties": {
+        "post_id": { "type": "number", "description": "Liked post ID" },
+        "profile_id": { "type": "number", "description": "Profile ID who liked" }
+      },
+      "required": ["post_id", "profile_id"]
+    },
+    "Friendship": {
+      "title": "Friendship",
+      "description": "Friend relationship between two profiles",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Friendship ID" },
+        "requester_id": { "type": "number", "description": "Sender profile ID" },
+        "recipient_id": { "type": "number", "description": "Receiver profile ID" },
+        "status": { "type": "string", "enum": ["pending", "accepted", "declined"], "description": "Status of the connection" },
+        "created_at": { "type": "string", "format": "date-time", "description": "Timestamp" }
+      },
+      "required": ["id", "requester_id", "recipient_id", "status"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "Direct message between two friends",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Message ID" },
+        "sender_id": { "type": "number", "description": "Sender profile ID" },
+        "recipient_id": { "type": "number", "description": "Recipient profile ID" },
+        "content": { "type": "string", "description": "Message text" },
+        "created_at": { "type": "string", "format": "date-time", "description": "Creation timestamp" },
+        "read_at": { "type": "string", "description": "Timestamp when read" }
+      },
+      "required": ["id", "sender_id", "recipient_id", "content", "created_at"]
+    },
+    "Call": {
+      "title": "Call",
+      "description": "WebRTC audio or video call session",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Call ID" },
+        "caller_id": { "type": "number", "description": "Caller profile ID" },
+        "callee_id": { "type": "number", "description": "Callee profile ID" },
+        "call_type": { "type": "string", "enum": ["audio", "video"], "description": "Call mode" },
+        "status": { "type": "string", "enum": ["outgoing", "active", "ended", "declined"], "description": "Call status" },
+        "offer": { "type": "string", "description": "WebRTC SDP offer string" },
+        "answer": { "type": "string", "description": "WebRTC SDP answer string" },
+        "created_at": { "type": "string", "format": "date-time", "description": "Timestamp" }
+      },
+      "required": ["id", "caller_id", "callee_id", "call_type", "status"]
+    },
+    "IceCandidate": {
+      "title": "IceCandidate",
+      "description": "WebRTC ICE candidate signaling",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Candidate record ID" },
+        "call_id": { "type": "number", "description": "Associated call ID" },
+        "sender_id": { "type": "number", "description": "Sender profile ID" },
+        "candidate": { "type": "string", "description": "ICE candidate payload" },
+        "created_at": { "type": "string", "format": "date-time", "description": "Timestamp" }
+      },
+      "required": ["id", "call_id", "sender_id", "candidate"]
+    }
+  },
+  "firestore": {
+    "/profiles/{profileId}": {
+      "schema": "Profile",
+      "description": "Stores individual user profile documents"
+    },
+    "/posts/{postId}": {
+      "schema": "Post",
+      "description": "Stores user feed posts"
+    },
+    "/comments/{commentId}": {
+      "schema": "Comment",
+      "description": "Stores comments attached to posts"
+    },
+    "/likes/{likeId}": {
+      "schema": "Like",
+      "description": "Stores like records for posts"
+    },
+    "/friendships/{friendshipId}": {
+      "schema": "Friendship",
+      "description": "Stores friend requests and connections"
+    },
+    "/messages/{messageId}": {
+      "schema": "Message",
+      "description": "Stores direct chat messages"
+    },
+    "/calls/{callId}": {
+      "schema": "Call",
+      "description": "Stores WebRTC signaling and active calls"
+    },
+    "/iceCandidates/{candidateId}": {
+      "schema": "IceCandidate",
+      "description": "Stores WebRTC ICE candidates for calls"
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { useIsAdmin } from '../hooks/useIsAdmin'
 import { useGetConversations } from '../hooks/backend/messages'
 import { UserAvatar } from './UserAvatar'
 import { ThemeToggle } from './ThemeToggle'
+import { DatabaseStatusBadge } from './DatabaseStatusBadge'
 import { Badge } from '../lib/shadcn/badge'
 import { cn } from '../lib/shadcn/utils'
 
@@ -77,6 +78,7 @@ export function Layout({ children }: { children: ReactNode }) {
           </nav>
 
           <div className="flex items-center gap-density-sm">
+            <DatabaseStatusBadge />
             <ThemeToggle />
             {profile && <UserAvatar name={profile.full_name} avatarUrl={profile.avatar_url} size="sm" ring />}
           </div>

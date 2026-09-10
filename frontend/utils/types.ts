@@ -13,6 +13,7 @@ export interface FeedPost {
 
 export interface PostComment {
   id: number
+  post_id?: number
   content: string
   created_at: string
   profile_id: number

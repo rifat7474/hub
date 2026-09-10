@@ -1,0 +1,6 @@
+{
+  "name": "Hub",
+  "description": "A social network app with feed, friend requests, real-time messaging, audio/video calls, and admin dashboard.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
